@@ -1,0 +1,59 @@
+﻿<Window x:Class="financialHelper1._0.ExpensesPage1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:financialHelper1._0"
+        mc:Ignorable="d"
+        Title="ExpensesPage1" Height="720" Width="1200" Background="#FF333131" WindowStartupLocation="CenterScreen" Icon="/FinancialHelperExpense3.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnBack_Click"/>
+        <Button x:Name="btnAllExpenses" Content="Expenses" Foreground="#FFFF2828" Background="Transparent" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" Click="btnAllExpenses_Click"/>
+        <DataGrid x:Name="gridExpensesPage" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" SelectionUnit="FullRow" Grid.Row="1" Grid.ColumnSpan="5" Background="Transparent" RowBackground="Transparent" BorderBrush="Transparent" Foreground="#FFFF2828" GridLinesVisibility="None">
+
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Foreground" Value="#FFFF2828"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+            <DataGrid.RowHeaderStyle>
+                <Style TargetType="DataGridRowHeader">
+                    <Setter Property="Foreground" Value="#FFFF2828"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </DataGrid.RowHeaderStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}" Visibility="Hidden"/>
+                <DataGridTextColumn Header="Date" Width="*" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Category" Width="*" Binding="{Binding Category}"/>
+                <DataGridTextColumn Header="Amount" Width="*" Binding="{Binding Amount}"/>
+                <DataGridTextColumn Header="Account" Width="*" Binding="{Binding AccountId}"/>
+                <DataGridTextColumn Header="Return" Width="*" Binding="{Binding HowMuchReturn}"/>
+                <DataGridTextColumn Header="Is Settled" Width="*" Binding="{Binding IsSettled}"/>
+                <DataGridTextColumn Header="Description" Width="*" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnMoneyReturn" Content="Show Returns" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnMoneyReturn_Click"/>
+        <Button x:Name="btnExpenseSettle" Content="Settle Expense" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnExpenseSettle_Click"/>
+        <Button x:Name="btnCategorySym" Content="Show Summed Categories" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnCategorySym_Click"/>
+        <Button x:Name="btnOwnExpenses" Content="Show My Expenses" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnOwnExpenses_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFEAEAEA" Background="Transparent" FontSize="24" Click="btnDelete_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddExpenseWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddIncomeWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AllAccounts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CashAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ExpensesPage1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="IKOAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="IncomesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RevolutAccount.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ExpensesMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddExpenseWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddIncomeWin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AllAccounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CashAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ExpensesPage1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IKOAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="IncomesPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RevolutAccount.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ExpensesMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
